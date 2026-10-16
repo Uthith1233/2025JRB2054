@@ -61,7 +61,7 @@ python src/download_adapters.py
 
 The downloader retrieves `adapters/` from `uthith/ELL8299-Assignment1`, preserves all three subdirectories, and does **not** require a Hugging Face login for this public repository.
 
-**For evaluation with no manual download steps:** `run_all.sh` should run `python src/download_adapters.py` before executing any scripts that load saved adapters. All scripts that use local adapters must resolve paths under the **root** `adapters/` directory, not `src/adapters/`. Any required base models (for example `Qwen/Qwen2.5-0.5B`) must likewise be retrieved automatically from their public model repositories using `from_pretrained(...)` or an equivalent download method.
+**Automatic downloads:** `run_all.sh` invokes `python src/download_adapters.py` so all three adapters are fetched without a manual download step. Code that loads local adapters must resolve paths under the repository-root `adapters/` directory, not `src/adapters/`. Any required base models (for example `Qwen/Qwen2.5-0.5B`) must also be retrieved automatically by the relevant model-loading code (such as `from_pretrained(...)`). Base-model loading has not been verified here.
 
 The downloader handles **adapter files only**; it does not automatically alter training or evaluation scripts, download task datasets, or confirm the full pipeline runs. Check that the other required inputs and paths are accessible before submission.
 
@@ -73,7 +73,9 @@ From the repository root:
 bash run_all.sh
 ```
 
-**Note:** Verify that `run_all.sh` calls `python src/download_adapters.py` before any adapter-dependent stages. The contents of `run_all.sh` have not been inspected as part of this README update.
+The script checks that the source files exist, compiles their Python syntax, downloads the three adapters from Hugging Face, and verifies that the downloaded directories are non-empty. **It is a repository check, not a full training or evaluation runner.** Run the assignment evaluation scripts using their existing commands and required datasets; check that they use the downloaded adapter paths and automatically retrieve any required base models.
+
+On Windows, run this Bash script from **Git Bash** or **WSL**. The adapter download can also be invoked independently from PowerShell: `python src/download_adapters.py`.
 
 ## Part A — PEFT sweep
 
