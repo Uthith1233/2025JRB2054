@@ -1,0 +1,1038 @@
+{
+  "finetuned_id": {
+    "system": "finetuned",
+    "adapter": "adapters/best_sanitizer",
+    "test_set": "data/trustworthy_llms_a1_bundle/data/partB_test.jsonl",
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_input_tokens": 1024,
+      "max_new_tokens": 512,
+      "truncated_prompt_count": 0
+    },
+    "n": 2000,
+    "exact": {
+      "micro_precision": 0.9292191822932677,
+      "micro_recall": 0.946161671492292,
+      "micro_f1": 0.9376138963204217,
+      "macro_precision": 0.9169352849153959,
+      "macro_recall": 0.9337669266890506,
+      "macro_f1": 0.9249454237826497,
+      "tp": 12091,
+      "fp": 921,
+      "fn": 688
+    },
+    "overlap_iou50": {
+      "micro_precision": 0.9326775284352905,
+      "micro_recall": 0.9496830737929416,
+      "micro_f1": 0.9411034857120701,
+      "macro_precision": 0.9211928794458605,
+      "macro_recall": 0.9381236638563818,
+      "macro_f1": 0.9292515111775467,
+      "tp": 12136,
+      "fp": 876,
+      "fn": 643
+    },
+    "per_class_top10": {
+      "TIME": {
+        "support": 945,
+        "exact": {
+          "precision": 0.9650273224043716,
+          "recall": 0.9343915343915344,
+          "f1": 0.9494623655913978,
+          "support": 945,
+          "tp": 883,
+          "fp": 32,
+          "fn": 62
+        },
+        "overlap_iou50": {
+          "precision": 0.9650273224043716,
+          "recall": 0.9343915343915344,
+          "f1": 0.9494623655913978,
+          "support": 945,
+          "tp": 883,
+          "fp": 32,
+          "fn": 62
+        }
+      },
+      "USERNAME": {
+        "support": 760,
+        "exact": {
+          "precision": 0.9427083333333334,
+          "recall": 0.9526315789473684,
+          "f1": 0.9476439790575917,
+          "support": 760,
+          "tp": 724,
+          "fp": 44,
+          "fn": 36
+        },
+        "overlap_iou50": {
+          "precision": 0.9466145833333334,
+          "recall": 0.9565789473684211,
+          "f1": 0.9515706806282723,
+          "support": 760,
+          "tp": 727,
+          "fp": 41,
+          "fn": 33
+        }
+      },
+      "SOCIALNUMBER": {
+        "support": 668,
+        "exact": {
+          "precision": 0.9671641791044776,
+          "recall": 0.9700598802395209,
+          "f1": 0.9686098654708519,
+          "support": 668,
+          "tp": 648,
+          "fp": 22,
+          "fn": 20
+        },
+        "overlap_iou50": {
+          "precision": 0.9671641791044776,
+          "recall": 0.9700598802395209,
+          "f1": 0.9686098654708519,
+          "support": 668,
+          "tp": 648,
+          "fp": 22,
+          "fn": 20
+        }
+      },
+      "EMAIL": {
+        "support": 662,
+        "exact": {
+          "precision": 0.9834087481146304,
+          "recall": 0.9848942598187311,
+          "f1": 0.9841509433962263,
+          "support": 662,
+          "tp": 652,
+          "fp": 11,
+          "fn": 10
+        },
+        "overlap_iou50": {
+          "precision": 0.9879336349924586,
+          "recall": 0.9894259818731118,
+          "f1": 0.9886792452830189,
+          "support": 662,
+          "tp": 655,
+          "fp": 8,
+          "fn": 7
+        }
+      },
+      "IDCARD": {
+        "support": 651,
+        "exact": {
+          "precision": 0.9295558958652373,
+          "recall": 0.9324116743471582,
+          "f1": 0.9309815950920246,
+          "support": 651,
+          "tp": 607,
+          "fp": 46,
+          "fn": 44
+        },
+        "overlap_iou50": {
+          "precision": 0.9295558958652373,
+          "recall": 0.9324116743471582,
+          "f1": 0.9309815950920246,
+          "support": 651,
+          "tp": 607,
+          "fp": 46,
+          "fn": 44
+        }
+      },
+      "DRIVERLICENSE": {
+        "support": 643,
+        "exact": {
+          "precision": 0.9396284829721362,
+          "recall": 0.9440124416796267,
+          "f1": 0.9418153607447634,
+          "support": 643,
+          "tp": 607,
+          "fp": 39,
+          "fn": 36
+        },
+        "overlap_iou50": {
+          "precision": 0.9427244582043344,
+          "recall": 0.9471228615863142,
+          "f1": 0.9449185415050427,
+          "support": 643,
+          "tp": 609,
+          "fp": 37,
+          "fn": 34
+        }
+      },
+      "LASTNAME1": {
+        "support": 623,
+        "exact": {
+          "precision": 0.9033333333333333,
+          "recall": 0.869983948635634,
+          "f1": 0.8863450531479967,
+          "support": 623,
+          "tp": 542,
+          "fp": 58,
+          "fn": 81
+        },
+        "overlap_iou50": {
+          "precision": 0.9033333333333333,
+          "recall": 0.869983948635634,
+          "f1": 0.8863450531479967,
+          "support": 623,
+          "tp": 542,
+          "fp": 58,
+          "fn": 81
+        }
+      },
+      "BOD": {
+        "support": 553,
+        "exact": {
+          "precision": 0.9711711711711711,
+          "recall": 0.9746835443037974,
+          "f1": 0.9729241877256317,
+          "support": 553,
+          "tp": 539,
+          "fp": 16,
+          "fn": 14
+        },
+        "overlap_iou50": {
+          "precision": 0.9765765765765766,
+          "recall": 0.9801084990958409,
+          "f1": 0.9783393501805054,
+          "support": 553,
+          "tp": 542,
+          "fp": 13,
+          "fn": 11
+        }
+      },
+      "PASSPORT": {
+        "support": 552,
+        "exact": {
+          "precision": 0.8898305084745762,
+          "recall": 0.9510869565217391,
+          "f1": 0.9194395796847635,
+          "support": 552,
+          "tp": 525,
+          "fp": 65,
+          "fn": 27
+        },
+        "overlap_iou50": {
+          "precision": 0.8915254237288136,
+          "recall": 0.9528985507246377,
+          "f1": 0.9211908931698775,
+          "support": 552,
+          "tp": 526,
+          "fp": 64,
+          "fn": 26
+        }
+      },
+      "SEX": {
+        "support": 529,
+        "exact": {
+          "precision": 0.9666048237476809,
+          "recall": 0.9848771266540642,
+          "f1": 0.9756554307116104,
+          "support": 529,
+          "tp": 521,
+          "fp": 18,
+          "fn": 8
+        },
+        "overlap_iou50": {
+          "precision": 0.9703153988868275,
+          "recall": 0.9886578449905482,
+          "f1": 0.9794007490636705,
+          "support": 529,
+          "tp": 523,
+          "fp": 16,
+          "fn": 6
+        }
+      }
+    },
+    "leak_rate": 0.036466077157837076,
+    "over_masking_rate": 0.003190513281793562,
+    "alignment_failure_count": 411,
+    "error_taxonomy": {
+      "missed_gold_entities_iou50": 643,
+      "spurious_predictions_iou50": 876,
+      "boundary_or_near_miss_entities": 45,
+      "leaked_gold_values": 466,
+      "alignment_failures": 411
+    },
+    "mean_latency_ms": 532.0459857554996
+  },
+  "finetuned_ood": {
+    "system": "finetuned",
+    "adapter": "adapters/best_sanitizer",
+    "test_set": "data/trustworthy_llms_a1_bundle/data/partB_ood_test.jsonl",
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_input_tokens": 1024,
+      "max_new_tokens": 512,
+      "truncated_prompt_count": 0
+    },
+    "n": 1000,
+    "exact": {
+      "micro_precision": 0.2265193370165746,
+      "micro_recall": 0.15133804983082128,
+      "micro_f1": 0.18144938226074125,
+      "macro_precision": 0.19387865222534337,
+      "macro_recall": 0.1427492192606312,
+      "macro_f1": 0.13298005118156755,
+      "tp": 492,
+      "fp": 1680,
+      "fn": 2759
+    },
+    "overlap_iou50": {
+      "micro_precision": 0.251841620626151,
+      "micro_recall": 0.16825592125499847,
+      "micro_f1": 0.20173335791997052,
+      "macro_precision": 0.23369132613048677,
+      "macro_recall": 0.157741031432476,
+      "macro_f1": 0.14992306130108327,
+      "tp": 547,
+      "fp": 1625,
+      "fn": 2704
+    },
+    "per_class_top10": {
+      "FIRSTNAME": {
+        "support": 334,
+        "exact": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 334,
+          "tp": 0,
+          "fp": 0,
+          "fn": 334
+        },
+        "overlap_iou50": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 334,
+          "tp": 0,
+          "fp": 0,
+          "fn": 334
+        }
+      },
+      "LASTNAME": {
+        "support": 124,
+        "exact": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 124,
+          "tp": 0,
+          "fp": 0,
+          "fn": 124
+        },
+        "overlap_iou50": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 124,
+          "tp": 0,
+          "fp": 0,
+          "fn": 124
+        }
+      },
+      "DATE": {
+        "support": 100,
+        "exact": {
+          "precision": 0.6984126984126984,
+          "recall": 0.88,
+          "f1": 0.7787610619469026,
+          "support": 100,
+          "tp": 88,
+          "fp": 38,
+          "fn": 12
+        },
+        "overlap_iou50": {
+          "precision": 0.7222222222222222,
+          "recall": 0.91,
+          "f1": 0.8053097345132744,
+          "support": 100,
+          "tp": 91,
+          "fp": 35,
+          "fn": 9
+        }
+      },
+      "EMAIL": {
+        "support": 97,
+        "exact": {
+          "precision": 0.6041666666666666,
+          "recall": 0.5979381443298969,
+          "f1": 0.6010362694300518,
+          "support": 97,
+          "tp": 58,
+          "fp": 38,
+          "fn": 39
+        },
+        "overlap_iou50": {
+          "precision": 0.8645833333333334,
+          "recall": 0.8556701030927835,
+          "f1": 0.8601036269430052,
+          "support": 97,
+          "tp": 83,
+          "fp": 13,
+          "fn": 14
+        }
+      },
+      "PREFIX": {
+        "support": 84,
+        "exact": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 84,
+          "tp": 0,
+          "fp": 0,
+          "fn": 84
+        },
+        "overlap_iou50": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 84,
+          "tp": 0,
+          "fp": 0,
+          "fn": 84
+        }
+      },
+      "AMOUNT": {
+        "support": 77,
+        "exact": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 77,
+          "tp": 0,
+          "fp": 0,
+          "fn": 77
+        },
+        "overlap_iou50": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 77,
+          "tp": 0,
+          "fp": 0,
+          "fn": 77
+        }
+      },
+      "JOBAREA": {
+        "support": 72,
+        "exact": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 72,
+          "tp": 0,
+          "fp": 0,
+          "fn": 72
+        },
+        "overlap_iou50": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 72,
+          "tp": 0,
+          "fp": 0,
+          "fn": 72
+        }
+      },
+      "URL": {
+        "support": 71,
+        "exact": {
+          "precision": 0.4,
+          "recall": 0.028169014084507043,
+          "f1": 0.05263157894736842,
+          "support": 71,
+          "tp": 2,
+          "fp": 3,
+          "fn": 69
+        },
+        "overlap_iou50": {
+          "precision": 1.0,
+          "recall": 0.07042253521126761,
+          "f1": 0.13157894736842107,
+          "support": 71,
+          "tp": 5,
+          "fp": 0,
+          "fn": 66
+        }
+      },
+      "PASSWORD": {
+        "support": 71,
+        "exact": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 71,
+          "tp": 0,
+          "fp": 0,
+          "fn": 71
+        },
+        "overlap_iou50": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 71,
+          "tp": 0,
+          "fp": 0,
+          "fn": 71
+        }
+      },
+      "MIDDLENAME": {
+        "support": 70,
+        "exact": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 70,
+          "tp": 0,
+          "fp": 0,
+          "fn": 70
+        },
+        "overlap_iou50": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 70,
+          "tp": 0,
+          "fp": 0,
+          "fn": 70
+        }
+      }
+    },
+    "leak_rate": 0.33928022147031683,
+    "over_masking_rate": 0.0018073743991648683,
+    "alignment_failure_count": 37,
+    "error_taxonomy": {
+      "missed_gold_entities_iou50": 2704,
+      "spurious_predictions_iou50": 1625,
+      "boundary_or_near_miss_entities": 55,
+      "leaked_gold_values": 1103,
+      "alignment_failures": 37
+    },
+    "mean_latency_ms": 235.75859631200046
+  },
+  "baselines": {
+    "regex": {
+      "system": "regex",
+      "adapter": null,
+      "test_set": "data/trustworthy_llms_a1_bundle/data/partB_test.jsonl",
+      "base_model": null,
+      "seed": 42,
+      "decoding": null,
+      "n": 2000,
+      "exact": {
+        "micro_precision": 0.5376205787781351,
+        "micro_recall": 0.13083965881524376,
+        "micro_f1": 0.21046006671282022,
+        "macro_precision": 0.10943921401269273,
+        "macro_recall": 0.09375679771347788,
+        "macro_f1": 0.09898426545618315,
+        "tp": 1672,
+        "fp": 1438,
+        "fn": 11107
+      },
+      "overlap_iou50": {
+        "micro_precision": 0.5684887459807074,
+        "micro_recall": 0.13835198372329605,
+        "micro_f1": 0.22254389829441754,
+        "macro_precision": 0.11357673500534284,
+        "macro_recall": 0.09756955402707339,
+        "macro_f1": 0.10295206050161093,
+        "tp": 1768,
+        "fp": 1342,
+        "fn": 11011
+      },
+      "per_class_top10": {
+        "TIME": {
+          "support": 945,
+          "exact": {
+            "precision": 0.6454965357967667,
+            "recall": 0.5915343915343916,
+            "f1": 0.6173384870237437,
+            "support": 945,
+            "tp": 559,
+            "fp": 307,
+            "fn": 386
+          },
+          "overlap_iou50": {
+            "precision": 0.7528868360277137,
+            "recall": 0.68994708994709,
+            "f1": 0.7200441744892324,
+            "support": 945,
+            "tp": 652,
+            "fp": 214,
+            "fn": 293
+          }
+        },
+        "USERNAME": {
+          "support": 760,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 760,
+            "tp": 0,
+            "fp": 0,
+            "fn": 760
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 760,
+            "tp": 0,
+            "fp": 0,
+            "fn": 760
+          }
+        },
+        "SOCIALNUMBER": {
+          "support": 668,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 668,
+            "tp": 0,
+            "fp": 0,
+            "fn": 668
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 668,
+            "tp": 0,
+            "fp": 0,
+            "fn": 668
+          }
+        },
+        "EMAIL": {
+          "support": 662,
+          "exact": {
+            "precision": 0.9409221902017291,
+            "recall": 0.986404833836858,
+            "f1": 0.963126843657817,
+            "support": 662,
+            "tp": 653,
+            "fp": 41,
+            "fn": 9
+          },
+          "overlap_iou50": {
+            "precision": 0.9452449567723343,
+            "recall": 0.9909365558912386,
+            "f1": 0.967551622418879,
+            "support": 662,
+            "tp": 656,
+            "fp": 38,
+            "fn": 6
+          }
+        },
+        "IDCARD": {
+          "support": 651,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 651,
+            "tp": 0,
+            "fp": 0,
+            "fn": 651
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 651,
+            "tp": 0,
+            "fp": 0,
+            "fn": 651
+          }
+        },
+        "DRIVERLICENSE": {
+          "support": 643,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 643,
+            "tp": 0,
+            "fp": 0,
+            "fn": 643
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 643,
+            "tp": 0,
+            "fp": 0,
+            "fn": 643
+          }
+        },
+        "LASTNAME1": {
+          "support": 623,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 623,
+            "tp": 0,
+            "fp": 0,
+            "fn": 623
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 623,
+            "tp": 0,
+            "fp": 0,
+            "fn": 623
+          }
+        },
+        "BOD": {
+          "support": 553,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 553,
+            "tp": 0,
+            "fp": 0,
+            "fn": 553
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 553,
+            "tp": 0,
+            "fp": 0,
+            "fn": 553
+          }
+        },
+        "PASSPORT": {
+          "support": 552,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 552,
+            "tp": 0,
+            "fp": 0,
+            "fn": 552
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 552,
+            "tp": 0,
+            "fp": 0,
+            "fn": 552
+          }
+        },
+        "SEX": {
+          "support": 529,
+          "exact": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 529,
+            "tp": 0,
+            "fp": 0,
+            "fn": 529
+          },
+          "overlap_iou50": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 529,
+            "tp": 0,
+            "fp": 0,
+            "fn": 529
+          }
+        }
+      },
+      "leak_rate": 0.7690742624618515,
+      "over_masking_rate": 0.002799668474901388,
+      "alignment_failure_count": 0,
+      "error_taxonomy": {
+        "missed_gold_entities_iou50": 11011,
+        "spurious_predictions_iou50": 1342,
+        "boundary_or_near_miss_entities": 96,
+        "leaked_gold_values": 9828,
+        "alignment_failures": 0
+      },
+      "mean_latency_ms": 0.180205217495768
+    },
+    "zeroshot": {
+      "system": "zeroshot",
+      "adapter": null,
+      "test_set": "data/trustworthy_llms_a1_bundle/data/partB_test.jsonl",
+      "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "seed": 42,
+      "decoding": {
+        "do_sample": false,
+        "num_beams": 1,
+        "max_input_tokens": 1024,
+        "max_new_tokens": 512,
+        "truncated_prompt_count": 0
+      },
+      "n": 2000,
+      "exact": {
+        "micro_precision": 0.09447703823588914,
+        "micro_recall": 0.03654433054229595,
+        "micro_f1": 0.05270285520821577,
+        "macro_precision": 0.3775871559707633,
+        "macro_recall": 0.030252858380730736,
+        "macro_f1": 0.047598864053165574,
+        "tp": 467,
+        "fp": 4476,
+        "fn": 12312
+      },
+      "overlap_iou50": {
+        "micro_precision": 0.10337851507181874,
+        "micro_recall": 0.03998747945848658,
+        "micro_f1": 0.05766843471391491,
+        "macro_precision": 0.3947456159978334,
+        "macro_recall": 0.0331415038038246,
+        "macro_f1": 0.05184690694069893,
+        "tp": 511,
+        "fp": 4432,
+        "fn": 12268
+      },
+      "per_class_top10": {
+        "TIME": {
+          "support": 945,
+          "exact": {
+            "precision": 0.3582089552238806,
+            "recall": 0.050793650793650794,
+            "f1": 0.08897126969416128,
+            "support": 945,
+            "tp": 48,
+            "fp": 86,
+            "fn": 897
+          },
+          "overlap_iou50": {
+            "precision": 0.373134328358209,
+            "recall": 0.05291005291005291,
+            "f1": 0.09267840593141798,
+            "support": 945,
+            "tp": 50,
+            "fp": 84,
+            "fn": 895
+          }
+        },
+        "USERNAME": {
+          "support": 760,
+          "exact": {
+            "precision": 0.47297297297297297,
+            "recall": 0.046052631578947366,
+            "f1": 0.08393285371702636,
+            "support": 760,
+            "tp": 35,
+            "fp": 39,
+            "fn": 725
+          },
+          "overlap_iou50": {
+            "precision": 0.5,
+            "recall": 0.04868421052631579,
+            "f1": 0.08872901678657075,
+            "support": 760,
+            "tp": 37,
+            "fp": 37,
+            "fn": 723
+          }
+        },
+        "SOCIALNUMBER": {
+          "support": 668,
+          "exact": {
+            "precision": 0.25,
+            "recall": 0.0014970059880239522,
+            "f1": 0.0029761904761904765,
+            "support": 668,
+            "tp": 1,
+            "fp": 3,
+            "fn": 667
+          },
+          "overlap_iou50": {
+            "precision": 0.25,
+            "recall": 0.0014970059880239522,
+            "f1": 0.0029761904761904765,
+            "support": 668,
+            "tp": 1,
+            "fp": 3,
+            "fn": 667
+          }
+        },
+        "EMAIL": {
+          "support": 662,
+          "exact": {
+            "precision": 0.19405320813771518,
+            "recall": 0.18731117824773413,
+            "f1": 0.19062259800153727,
+            "support": 662,
+            "tp": 124,
+            "fp": 515,
+            "fn": 538
+          },
+          "overlap_iou50": {
+            "precision": 0.215962441314554,
+            "recall": 0.2084592145015106,
+            "f1": 0.2121445042275173,
+            "support": 662,
+            "tp": 138,
+            "fp": 501,
+            "fn": 524
+          }
+        },
+        "IDCARD": {
+          "support": 651,
+          "exact": {
+            "precision": 0.5,
+            "recall": 0.010752688172043012,
+            "f1": 0.02105263157894737,
+            "support": 651,
+            "tp": 7,
+            "fp": 7,
+            "fn": 644
+          },
+          "overlap_iou50": {
+            "precision": 0.5714285714285714,
+            "recall": 0.01228878648233487,
+            "f1": 0.024060150375939848,
+            "support": 651,
+            "tp": 8,
+            "fp": 6,
+            "fn": 643
+          }
+        },
+        "DRIVERLICENSE": {
+          "support": 643,
+          "exact": {
+            "precision": 0.625,
+            "recall": 0.007776049766718507,
+            "f1": 0.015360983102918587,
+            "support": 643,
+            "tp": 5,
+            "fp": 3,
+            "fn": 638
+          },
+          "overlap_iou50": {
+            "precision": 0.625,
+            "recall": 0.007776049766718507,
+            "f1": 0.015360983102918587,
+            "support": 643,
+            "tp": 5,
+            "fp": 3,
+            "fn": 638
+          }
+        },
+        "LASTNAME1": {
+          "support": 623,
+          "exact": {
+            "precision": 0.1,
+            "recall": 0.0016051364365971107,
+            "f1": 0.00315955766192733,
+            "support": 623,
+            "tp": 1,
+            "fp": 9,
+            "fn": 622
+          },
+          "overlap_iou50": {
+            "precision": 0.1,
+            "recall": 0.0016051364365971107,
+            "f1": 0.00315955766192733,
+            "support": 623,
+            "tp": 1,
+            "fp": 9,
+            "fn": 622
+          }
+        },
+        "BOD": {
+          "support": 553,
+          "exact": {
+            "precision": 1.0,
+            "recall": 0.0018083182640144665,
+            "f1": 0.003610108303249097,
+            "support": 553,
+            "tp": 1,
+            "fp": 0,
+            "fn": 552
+          },
+          "overlap_iou50": {
+            "precision": 1.0,
+            "recall": 0.0018083182640144665,
+            "f1": 0.003610108303249097,
+            "support": 553,
+            "tp": 1,
+            "fp": 0,
+            "fn": 552
+          }
+        },
+        "PASSPORT": {
+          "support": 552,
+          "exact": {
+            "precision": 0.4636363636363636,
+            "recall": 0.09239130434782608,
+            "f1": 0.1540785498489426,
+            "support": 552,
+            "tp": 51,
+            "fp": 59,
+            "fn": 501
+          },
+          "overlap_iou50": {
+            "precision": 0.5181818181818182,
+            "recall": 0.10326086956521739,
+            "f1": 0.17220543806646527,
+            "support": 552,
+            "tp": 57,
+            "fp": 53,
+            "fn": 495
+          }
+        },
+        "SEX": {
+          "support": 529,
+          "exact": {
+            "precision": 0.35,
+            "recall": 0.013232514177693762,
+            "f1": 0.025500910746812384,
+            "support": 529,
+            "tp": 7,
+            "fp": 13,
+            "fn": 522
+          },
+          "overlap_iou50": {
+            "precision": 0.4,
+            "recall": 0.015122873345935728,
+            "f1": 0.029143897996357013,
+            "support": 529,
+            "tp": 8,
+            "fp": 12,
+            "fn": 521
+          }
+        }
+      },
+      "leak_rate": 0.5815008999139213,
+      "over_masking_rate": 0.20132526880975282,
+      "alignment_failure_count": 5855,
+      "error_taxonomy": {
+        "missed_gold_entities_iou50": 12268,
+        "spurious_predictions_iou50": 4432,
+        "boundary_or_near_miss_entities": 44,
+        "leaked_gold_values": 7431,
+        "alignment_failures": 5855
+      },
+      "mean_latency_ms": 630.9789549340012
+    }
+  }
+}

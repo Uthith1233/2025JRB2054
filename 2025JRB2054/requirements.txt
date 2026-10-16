@@ -1,0 +1,14 @@
+torch
+transformers>=4.51,<5
+peft>=0.15,<0.18
+accelerate>=1.0
+bitsandbytes
+datasets
+safetensors
+sentencepiece
+numpy
+pandas
+matplotlib
+tqdm
+presidio-analyzer
+presidio-anonymizer
